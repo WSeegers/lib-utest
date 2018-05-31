@@ -6,7 +6,7 @@
 /*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/30 03:09:44 by wseegers          #+#    #+#             */
-/*   Updated: 2018/05/30 03:34:26 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/05/31 13:31:24 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ t_test			*create_test(char *desc, int timeout, int (*f_test)(void))
 	test->desc = strdup(desc);
 	test->timeout = timeout;
 	test->f_test = f_test;
+	test->next = NULL;
 	return (test);
 }
